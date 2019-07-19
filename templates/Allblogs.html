@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+    ALL BLOGS
+{% endblock %}
+
+{% block content %}
+    THE LIST OF BLOGS<br>
+    <ul>
+{% for blog in qs %}
+
+    <li><a href= "{% url "Blogview" blog.id %}">{{ blog.title }}</a></li>
+
+{% endfor %}
+    </ul>
+{% endblock %}

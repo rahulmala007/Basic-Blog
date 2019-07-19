@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome {% endblock %}</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'MyBlog/MyBlog.css' %}" >
+</head>
+<body>
+{% block content %}
+    <span id= 'welcome' > Welcome to my blog </span>
+
+
+    <div id="create">
+    Click here to add to the community
+    </div>
+
+
+    <div id ="view">
+    <a href="{% url "AllBlogView" %}"> Click </a>here to see all the blogs
+    </div>
+
+
+{% endblock %}
+</body>
+</html>
